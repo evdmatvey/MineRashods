@@ -81,18 +81,51 @@ button {
   padding: 40px 0 0 40px;
 
   .app__wrapper {
+    margin-bottom: 30px;
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
 
   .app__filter {
+    display: flex;
+    align-items: center;
+    gap: 0 20px;
 
     &-title {
       font-weight: 500;
       font-size: 24px;
       line-height: 28px;
       color: #000000;
+    }
+
+    &-categories {
+      position: relative;
+    }
+
+    &-price {
+      display: flex;
+      align-items: center;
+      gap: 0 5px;
+
+      input {
+        width: 110px;
+        padding: 3px 7px;
+        border: none;
+        border-bottom: 2px solid #000;
+        outline: none;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 16px;
+        color: #969696;
+
+        &::placeholder {
+          font-weight: 500;
+          font-size: 14px;
+          line-height: 16px;
+          color: #969696;
+        }
+      }
     }
   }
 
@@ -104,6 +137,77 @@ button {
     
     span {
       color: #969696;
+    }
+  }
+
+  .app__categories {
+    &-title {
+      padding-right: 23px;
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 21px;
+      color: #000000;
+      position: relative;
+      cursor: pointer;
+
+      &::before {
+        content: '';
+        width: 20px;
+        height: 20px;
+        display: block;
+        background: url(../img/arrow-down.svg) no-repeat center;
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        transition: .2s linear;
+      }
+    }
+    &-list {
+      display: none;
+    }
+  }
+
+  .app__filter-categories.active {
+    .app__categories-list {
+      width: 150px;
+      padding: 19px;
+      background: #000;
+      color: #fff;
+      list-style: none;
+      border-radius: 5px;
+      z-index: 2;
+      position: absolute;
+      bottom: -210px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: block;
+  
+      li {
+        margin-bottom: 10px;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 18px;
+        color: #FFFFFF;
+        cursor: pointer;
+  
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    .app__categories-title::before {
+      transform: rotate(-180deg) translateY(50%);
+    }
+  }
+
+  .app__price {
+    &-text {
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 21px;
+      color: #000000;
     }
   }
 }

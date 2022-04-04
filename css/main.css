@@ -92,6 +92,7 @@ button {
 }
 
 .app .app__wrapper {
+  margin-bottom: 30px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -103,11 +104,75 @@ button {
           align-items: center;
 }
 
+.app .app__filter {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0 20px;
+}
+
 .app .app__filter-title {
   font-weight: 500;
   font-size: 24px;
   line-height: 28px;
   color: #000000;
+}
+
+.app .app__filter-categories {
+  position: relative;
+}
+
+.app .app__filter-price {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0 5px;
+}
+
+.app .app__filter-price input {
+  width: 110px;
+  padding: 3px 7px;
+  border: none;
+  border-bottom: 2px solid #000;
+  outline: none;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  color: #969696;
+}
+
+.app .app__filter-price input::-webkit-input-placeholder {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  color: #969696;
+}
+
+.app .app__filter-price input:-ms-input-placeholder {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  color: #969696;
+}
+
+.app .app__filter-price input::-ms-input-placeholder {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  color: #969696;
+}
+
+.app .app__filter-price input::placeholder {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  color: #969696;
 }
 
 .app .app__budget {
@@ -119,4 +184,74 @@ button {
 
 .app .app__budget span {
   color: #969696;
+}
+
+.app .app__categories-title {
+  padding-right: 23px;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 21px;
+  color: #000000;
+  position: relative;
+  cursor: pointer;
+}
+
+.app .app__categories-title::before {
+  content: '';
+  width: 20px;
+  height: 20px;
+  display: block;
+  background: url(../img/arrow-down.svg) no-repeat center;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  -webkit-transition: .2s linear;
+  transition: .2s linear;
+}
+
+.app .app__categories-list {
+  display: none;
+}
+
+.app .app__filter-categories.active .app__categories-list {
+  width: 150px;
+  padding: 19px;
+  background: #000;
+  color: #fff;
+  list-style: none;
+  border-radius: 5px;
+  z-index: 2;
+  position: absolute;
+  bottom: -210px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  display: block;
+}
+
+.app .app__filter-categories.active .app__categories-list li {
+  margin-bottom: 10px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 18px;
+  color: #FFFFFF;
+  cursor: pointer;
+}
+
+.app .app__filter-categories.active .app__categories-list li:last-child {
+  margin-bottom: 0;
+}
+
+.app .app__filter-categories.active .app__categories-title::before {
+  -webkit-transform: rotate(-180deg) translateY(50%);
+          transform: rotate(-180deg) translateY(50%);
+}
+
+.app .app__price-text {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 21px;
+  color: #000000;
 }
