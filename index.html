@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mine Rashods</title>
+  <!-- fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet">
+  <!-- styles -->
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+  <!-- header -->
+  <header class="header">
+    <div class="container">
+      <div class="header__wrapper">
+        <a href="#" class="header__logo">Mine Rashods</a>
+        <div class="header__buttons">
+          <button class="header__button-budget">Бюджет</button>
+          <button class="header__button-remove">Удалить все</button>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- header -->
+  <!-- app -->
+  <section class="app">
+    <div class="container">
+      <div class="app__wrapper">
+        <h1 class="app__filter-title">Фильтрация</h1>
+        <div class="app__budget">Бюджет: <span class="budget">укажите бюджет</span></div>
+      </div>
+      <div class="app__filter">
+        <div class="app__filter-categories">
+          <div class="app__categories-title">Категория</div>
+          <ul class="app__categories-list">
+            <li>Без категории</li>
+            <li>Продукты</li>
+            <li>Разное</li>
+            <li>Книги</li>
+            <li>Одежда</li>
+            <li>Товары</li>
+          </ul>
+        </div>
+        <div class="app__filter-price">
+          <div class="app__price-text">Стоимость:</div>
+          <input type="text" placeholder="Минимальная" name="min">
+          <div class="app__price-text">-</div>
+          <input type="text" placeholder="Максимальная" name="max">
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- app -->
+
+  <!-- scripts -->
+  <script src="js/main.js"></script>
+</body>
+</html>
