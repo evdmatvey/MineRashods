@@ -88,6 +88,7 @@ button {
   }
 
   .app__filter {
+    margin-bottom: 40px;
     display: flex;
     align-items: center;
     gap: 0 20px;
@@ -208,6 +209,140 @@ button {
       font-size: 18px;
       line-height: 21px;
       color: #000000;
+    }
+  }
+
+  &__inner {
+    display: flex;
+    gap: 0 40px;
+  }
+
+  &__form {
+    font-family: 'Ubunty', sans-serif;
+    width: 350px;
+    background: #000;
+    color: #fff;
+
+    &-wrapper {
+      padding: 30px 30px 20px 30px;
+    }
+
+    &-title {
+      margin-bottom: 15px;
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 21px;
+      color: #FFFFFF;
+    }
+
+    input {
+      width: 290px;
+      margin-bottom: 15px;
+      padding: 3px 7px;
+      border: none;
+      border-bottom: 2px solid #fff;
+      outline: none;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 16px;
+      color: #969696;
+      display: block;
+      background: #000;
+
+      &::placeholder {
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 16px;
+        color: #969696;
+      }
+    }
+
+    &-select {
+      position: relative;
+    }
+
+    button {
+      width: 100%;
+      padding: 10px 133px;
+      display: block;
+      background-color: #19A127;
+      border: none;
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 21px;
+      color: #FFFFFF;
+      cursor: pointer;
+      transition: .2s linear;
+
+      &:hover {
+        background: #178d23;
+      }
+    }
+  }
+
+  .app__select {
+    &-title {
+      width: 290px;
+      margin-bottom: 15px;
+      padding: 3px 27px 3px 7px;
+      border: none;
+      border-bottom: 2px solid #fff;
+      outline: none;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 16px;
+      color: #969696;
+      display: block;
+      background: #000;
+      position: relative;
+      cursor: pointer;
+
+      &::before {
+        content: '';
+        width: 20px;
+        height: 20px;
+        background: url(../img/arrow-down-2.svg) no-repeat center;
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        transition: .2s linear;
+      }
+    }
+
+    &-list {
+      display: none;
+    }
+  }
+
+  .app__form-select.active {
+    .app__select-list {
+      width: 290px;
+      padding: 20px 30px;
+      border-radius: 5px;
+      display: block;
+      list-style: none;
+      position: absolute;
+      left: 0;
+      bottom: -233px;
+      background: #000;
+
+      li {
+        margin-bottom: 10px;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 18px;
+        color: #FFFFFF;
+        cursor: pointer;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    .app__select-title::before {
+      transform: rotate(-180deg) translateY(50%);
     }
   }
 }
