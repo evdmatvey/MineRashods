@@ -88,10 +88,11 @@ button {
 }
 
 .app {
-  padding: 40px 0 0 40px;
+  padding: 40px 0 0 0;
 }
 
 .app .app__wrapper {
+  padding-left: 40px;
   margin-bottom: 30px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -105,6 +106,7 @@ button {
 }
 
 .app .app__filter {
+  padding-left: 40px;
   margin-bottom: 40px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -258,6 +260,7 @@ button {
 }
 
 .app__inner {
+  padding-left: 40px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -412,4 +415,95 @@ button {
 .app .app__form-select.active .app__select-title::before {
   -webkit-transform: rotate(-180deg) translateY(50%);
           transform: rotate(-180deg) translateY(50%);
+}
+
+.app .app__table-header, .app .app__table .app__row {
+  margin-bottom: 20px;
+  padding-bottom: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 21px;
+  color: #000000;
+  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.app .app__table-header, .app .app__table .app__table-rows {
+  border-bottom: 2px solid #000;
+}
+
+.app .app__row {
+  text-align: center;
+}
+
+.app .app__header-name, .app .app__row-name {
+  width: 104px;
+}
+
+.app .app__header-amount, .app .app__row-amount {
+  width: 143px;
+  padding: 0 19px;
+}
+
+.app .app__header-price, .app .app__row-price {
+  width: 192px;
+  padding: 0 19px;
+}
+
+.app .app__header-tag, .app .app__row-tag {
+  width: 131px;
+  padding: 0 14px;
+}
+
+.app .app__header-calc, .app .app__row-calc {
+  width: 200px;
+  padding-left: 22px;
+}
+
+.app__header-name {
+  padding: 0;
+  text-align: left;
+}
+
+.app .app__row-tag--color {
+  width: 100px;
+  margin: 0 auto;
+  border-radius: 5px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  color: #FFFFFF;
+}
+
+.app .app__row-tag--yellow {
+  padding: 7px 15px;
+  background-color: #FFB800;
+}
+
+.app .app__row-tag--purple {
+  padding: 7px 26px;
+  background-color: #5025AB;
+}
+
+.app .app__table-result {
+  margin-top: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 21px;
+  color: #000000;
+}
+
+.app .app__table-result span {
+  margin-left: 5px;
 }

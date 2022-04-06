@@ -1,35 +1,34 @@
 const categoriesButton = document.querySelector('.app__categories-title');
-
-categoriesButton.addEventListener('click', () => {
-  categoriesButton.closest('.app__filter-categories').classList.add('active');
-});
-
-document.addEventListener('click', e => {
-  if(!e.target.closest('.app__filter-categories')) {
-    document.querySelector('.app__filter-categories.active').classList.remove('active');
-  }
-});
-
+const categoriesItems = document.querySelectorAll('.app__categories-list li');
 const selectTitle = document.querySelector('.app__select-title');
 const selectListItems = document.querySelectorAll('.app__select-list li');
 
-const selectClose = () => {
-  document.querySelector('.app__form-select.active').classList.remove('active');
+const selectsClose = (selector) => {
+  document.querySelector(selector).classList.remove('active');
 }
 
-selectTitle.addEventListener('click', () => {
-  selectTitle.closest('.app__form-select').classList.add('active');
-});
-
-document.addEventListener('click', e => {
-  if(!e.target.closest('.app__form-select')) {
-    selectClose();
-  }
-});
-
-selectListItems.forEach(item => {
-  item.addEventListener('click', () => {
-    selectTitle.innerHTML = item.innerHTML;
-    selectClose();
+const selects = (selectsTitle, selectItems, selectSelector) => {
+  selectsTitle.addEventListener('click', () => {
+    selectsTitle.closest(selectSelector).classList.add('active');
+  });
+  
+  document.addEventListener('click', e => {
+    if(!e.target.closest(selectSelector)) {
+      selectsClose(selectSelector);
+    }
+  });
+  
+  selectItems.forEach(item => {
+    item.addEventListener('click', () => {
+      selectsTitle.innerHTML = item.innerHTML;
+      selectsClose(selectSelector);
+    })
   })
-})
+}
+
+selects(selectTitle, selectListItems, '.app__form-select');
+selects(categoriesButton, categoriesItems, '.app__filter-categories');
+
+let pat = function (Element, input) {
+  input.value = Element.textContent;
+}

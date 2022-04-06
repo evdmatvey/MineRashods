@@ -78,9 +78,10 @@ button {
 // app
 
 .app {
-  padding: 40px 0 0 40px;
+  padding: 40px 0 0 0;
 
   .app__wrapper {
+    padding-left: 40px;
     margin-bottom: 30px;
     display: flex;
     justify-content: space-between;
@@ -88,6 +89,7 @@ button {
   }
 
   .app__filter {
+    padding-left: 40px;
     margin-bottom: 40px;
     display: flex;
     align-items: center;
@@ -213,6 +215,7 @@ button {
   }
 
   &__inner {
+    padding-left: 40px;
     display: flex;
     gap: 0 40px;
   }
@@ -343,6 +346,93 @@ button {
 
     .app__select-title::before {
       transform: rotate(-180deg) translateY(50%);
+    }
+  }
+
+  .app__table {
+    &-header, .app__row {
+      margin-bottom: 20px;
+      padding-bottom: 5px;
+      display: flex;
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 21px;
+      color: #000000;
+      text-align: center;
+      align-items: center;
+    }
+
+    &-header, .app__table-rows {
+      border-bottom: 2px solid #000;
+    }
+  }
+
+  .app__row {
+    text-align: center;
+  }
+
+  .app__header, .app__row {
+    &-name {
+      width: 104px;
+    }
+
+    &-amount {
+      width: 143px;
+      padding: 0 19px;
+    }
+
+    &-price {
+      width: 192px;
+      padding: 0 19px;
+    }
+
+    &-tag {
+      width: 131px;
+      padding: 0 14px;
+    }
+
+    &-calc {
+      width: 200px;
+      padding-left: 22px;
+    }
+  }
+
+  &__header-name {
+    padding: 0;
+    text-align: left;
+  }
+
+  .app__row-tag--color {
+    width: 100px;
+    margin: 0 auto;
+    border-radius: 5px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    color: #FFFFFF;
+  }
+
+  .app__row-tag--yellow {
+    padding: 7px 15px;
+    background-color: #FFB800;
+  }
+
+  .app__row-tag--purple {
+    padding: 7px 26px;
+    background-color: #5025AB;
+  }
+
+  .app__table-result {
+    margin-top: 20px;
+    display: flex;
+    justify-content: end;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;
+    color: #000000;
+
+    span {
+      margin-left: 5px;
     }
   }
 }
