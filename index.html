@@ -33,14 +33,14 @@
       </div>
       <div class="app__filter">
         <div class="app__filter-categories">
-          <div class="app__categories-title">Категория</div>
+          <div class="app__categories-title" data-select="">Категория</div>
           <ul class="app__categories-list">
-            <li>Без категории</li>
-            <li>Продукты</li>
-            <li>Разное</li>
-            <li>Книги</li>
-            <li>Одежда</li>
-            <li>Товары</li>
+            <li data-tag="black">Без категории</li>
+            <li data-tag="yellow">Продукты</li>
+            <li data-tag="purple">Разное</li>
+            <li data-tag="orange">Книги</li>
+            <li data-tag="blue">Одежда</li>
+            <li data-tag="green">Товары</li>
           </ul>
         </div>
         <div class="app__filter-price">
@@ -91,14 +91,14 @@
             <input type="text" placeholder="Введите количество" name="amount">
             <input type="text" placeholder="Введите стоимость за 1 шт." name="price">
             <div class="app__form-select">
-              <div class="app__select-title">Выберите категорию</div>
+              <div class="app__select-title" data-select="">Выберите категорию</div>
               <ul class="app__select-list">
-                <li>Без категории</li>
-                <li>Продукты</li>
-                <li>Разное</li>
-                <li>Книги</li>
-                <li>Одежда</li>
-                <li>Товары</li>
+                <li data-tag="black">Без категории</li>
+                <li data-tag="yellow">Продукты</li>
+                <li data-tag="purple">Разное</li>
+                <li data-tag="orange">Книги</li>
+                <li data-tag="blue">Одежда</li>
+                <li data-tag="green">Товары</li>
               </ul>
             </div>
           </div>
@@ -110,6 +110,7 @@
   <!-- app -->
 
   <!-- scripts -->
+  <script src="js/table.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>

@@ -422,6 +422,26 @@ button {
     background-color: #5025AB;
   }
 
+  .app__row-tag--green {
+    padding: 7px 24px;
+    background-color: #48AB25;
+  }
+
+  .app__row-tag--blue {
+    padding: 7px 22px;
+    background-color: #2593AB;
+  }
+
+  .app__row-tag--orange {
+    padding: 7px 29px;
+    background-color: #FF5C00;
+  }
+
+  .app__row-tag--black {
+    padding: 7px 26px;
+    background-color: #000;
+  }
+
   .app__table-result {
     margin-top: 20px;
     display: flex;

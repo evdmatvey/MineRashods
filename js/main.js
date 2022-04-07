@@ -21,6 +21,7 @@ const selects = (selectsTitle, selectItems, selectSelector) => {
   selectItems.forEach(item => {
     item.addEventListener('click', () => {
       selectsTitle.innerHTML = item.innerHTML;
+      selectsTitle.dataset.select = item.dataset.tag;
       selectsClose(selectSelector);
     })
   })
@@ -28,7 +29,3 @@ const selects = (selectsTitle, selectItems, selectSelector) => {
 
 selects(selectTitle, selectListItems, '.app__form-select');
 selects(categoriesButton, categoriesItems, '.app__filter-categories');
-
-let pat = function (Element, input) {
-  input.value = Element.textContent;
-}
