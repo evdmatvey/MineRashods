@@ -3,6 +3,8 @@ const tableElement = document.querySelector('.app__table-rows');
 const tableElements = [];
 
 const renderRows = (elements) => {
+  tableElement.innerHTML = '';
+
   elements.forEach(elem => {
     let tag;
 
@@ -36,6 +38,7 @@ const renderRows = (elements) => {
   </div>`;
 
     tableElement.insertAdjacentHTML('beforeend', template);
+    calcResult();
   })
 }
 

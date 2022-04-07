@@ -270,6 +270,7 @@ button {
 .app__form {
   font-family: 'Ubunty', sans-serif;
   width: 350px;
+  height: 242px;
   background: #000;
   color: #fff;
 }
@@ -526,4 +527,8 @@ button {
 
 .app .app__table-result span {
   margin-left: 5px;
+}
+
+.app .app__table-result span.gray {
+  color: #969696;
 }
